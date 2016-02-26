@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="manage" extends="common" namespace="/">
+	  	<action name="questionManageAction" class="questionManageAction">
+	  		<result name="listdetecquestion">manage/question/list_detecquestion.jsp</result>
+	  		<result name="addetecquestion">manage/question/add_detecquestion.jsp</result>
+	  		<result name="editdetecquestion">manage/question/edit_detecquestion.jsp</result>
+	  	</action>
+	  	<action name="userManageAction" class="userManageAction">
+	  		<result name="listusers">manage/personnel/list_user.jsp</result>
+	  		<result name="addusers">manage/personnel/add_user.jsp</result>
+	  		<result name="editusers">manage/personnel/edit_user.jsp</result>
+	  		<result name="updatepw">manage/personnel/update_pwd.jsp</result>
+	  	</action>
+	  	<action name="partManageAction" class="partManageAction">
+	  		<result name="listparts">manage/parts/list_part.jsp</result>
+	  		<result name="addparts">manage/parts/add_part.jsp</result>
+	  		<result name="editparts">manage/parts/edit_part.jsp</result>
+	  	</action>
+	</package>
+</struts>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xmlns:aop="http://www.springframework.org/schema/aop"
+             xmlns:tx="http://www.springframework.org/schema/tx"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+                     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                     http://www.springframework.org/schema/context
+                     http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                     http://www.springframework.org/schema/aop
+                     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+                     http://www.springframework.org/schema/tx
+                     http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	
+	<!-- 题库管理 -->
+	<bean id="questionManageDao" class="com.ts.manage.dao.impl.QuestionManageDaoImpl">
+    	<property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="questionManageService" class="com.ts.manage.service.impl.QuestionManageServiceImpl"></bean>
+	<bean id="questionManageAction" class="com.ts.manage.action.QuestionManageAction" scope="prototype"></bean>
+	
+	<!-- 用户管理 -->
+	<bean id="userManageDao" class="com.ts.manage.dao.impl.UserManageDaoImpl">
+    	<property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="userManageService" class="com.ts.manage.service.impl.UserManageServiceImpl"></bean>
+	<bean id="userManageAction" class="com.ts.manage.action.UserManageAction" scope="prototype"></bean>
+	
+	<!-- 配件管理 -->
+	<bean id="partManageDao" class="com.ts.manage.dao.impl.PartsManageDaoImpl">
+    	<property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="partManageService" class="com.ts.manage.service.impl.PartsManageServiceImpl"></bean>
+	<bean id="partManageAction" class="com.ts.manage.action.PartsManageAction" scope="prototype"></bean>
+</beans>

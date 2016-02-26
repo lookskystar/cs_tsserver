@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="ts" extends="common" namespace="/">
+		<action name="loginAction" class="loginAction">
+	  		<result name="main" type="redirect">/main.jsp</result>
+	  		<result name="loginOut" type="redirect">login.jsp</result>
+	  	</action>
+	  	
+	  	<action name="examAction" class="examAction">
+	  		<result name="listExam">exam/list_exam.jsp</result>
+	  		<result name="overExam">exam/over_exam.jsp</result>
+	  	</action>
+	  	
+	  	<action name="decRecordAction" class="decRecordAction">
+	  		<result name="unfinishDecRecords">work/at/unfinish_decrecords.jsp</result>
+	  		<result name="updatedecrecord">work/at/update_decrecord.jsp</result>
+	  		<result name="finishDecRecords">work/at/finish_decrecords.jsp</result>
+	  		<result name="decrecordDetail">work/at/decrecord_detail.jsp</result>
+	  		<result name="fillDecRecordDialog">work/at/fill_rec_dialog.jsp</result>
+	  		<result name="reportiframe">work/at/report_iframe.jsp</result>
+	  		<result name="addBadPJInput">work/at/add_bad_pj.jsp</result>
+	  		<result name="listbadpj">work/at/list_bad_pj.jsp</result>
+	  	</action>
+	  	
+	  	<action name="videoAction" class="videoAction">
+	  	</action>
+	</package>
+</struts>

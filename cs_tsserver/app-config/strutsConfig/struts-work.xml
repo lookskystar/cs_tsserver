@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="work" extends="common" namespace="/">
+		<action name="tsAssignAction" class="tsAssignAction">
+	  		<result name="assign" >work/bh/assign.jsp</result>
+	  		<result name="jjassign" >work/bh/jjassign.jsp</result>
+	  		<result name="tsassign" >work/bh/tsassign.jsp</result>
+	  		<result name="urgent" >work/bh/urgent.jsp</result>
+	  	</action>
+	  	
+	  	<action name="assignQueryAction" class="assignQueryAction">
+	  		<result name="assignquery" >work/query/assignquery.jsp</result>
+	  		<result name="decInfo" >work/query/decInfo.jsp</result>
+	  	</action>
+	</package>
+</struts>
